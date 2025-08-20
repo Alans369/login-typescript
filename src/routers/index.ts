@@ -1,5 +1,8 @@
+import type { Request, Response } from "express";
 import { Router } from "express";
-import type { Request,Response } from "express";
+
+import { type LoginRequest} from "../types/index.ts";
+
 
 
 
@@ -12,11 +15,9 @@ router.get('/',(req:Request,res:Response)=>{
 
 router.post('/login',(req:Request,res:Response)=>{
 
-    const {username,password}=req.body
-    
-    console.log(username)
+    const loginData: LoginRequest = req.body;
 
-    res.send("hello")
+    res.send(loginData)
 })
 
 
