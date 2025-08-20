@@ -4,6 +4,8 @@
     // File Layout
     // "rootDir": "./src",
     "outDir": "./dist",
+     "noEmit": true,  // Si solo usas tsx/ts-node
+     
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
@@ -11,6 +13,7 @@
     "target": "esnext",
     
     "types": ["node"],
+    
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -24,6 +27,7 @@
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "allowImportingTsExtensions": true, 
 
     // Style Options
     // "noImplicitReturns": true,
@@ -41,5 +45,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  
 }
