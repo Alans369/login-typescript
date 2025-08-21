@@ -1,35 +1,31 @@
 {
   "devDependencies": {
-    "@types/express": "5.0.3",
-    "@types/node": "24.3.0",
-    "ts-node": "10.9.2",
-    "typescript": "5.9.2"
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "typeorm": "^0.3.17",
+    "reflect-metadata": "^0.1.13",
+    "mysql2": "^3.6.0"
   },
   "name": "login-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "dev:1": "nodemon src/data-source.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alans369/login-typescript.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Alans369/login-typescript/issues"
-  },
-  "homepage": "https://github.com/Alans369/login-typescript#readme",
-  "dependencies": {
-    "express": "5.1.0",
-    "mysql2": "^3.14.3",
-    "nodemon": "^3.1.10",
-    "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.26"
-  }
+  "author": ""
 }
